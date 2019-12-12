@@ -272,7 +272,7 @@ RectTransform:
   m_LocalScale: {x: 100, y: 100, z: 1}
   m_Children: []
   m_Father: {fileID: 312149280}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 2.66}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -413,12 +413,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 640859042}
   - {fileID: 1334717807}
   - {fileID: 2022484499}
   - {fileID: 261837852}
   - {fileID: 1825189965}
   - {fileID: 1649715460}
-  - {fileID: 640859042}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -743,11 +743,11 @@ RectTransform:
   m_Children:
   - {fileID: 1484256224}
   m_Father: {fileID: 312149280}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000030517578, y: 392.7644}
+  m_AnchoredPosition: {x: 0.000030517578, y: 268}
   m_SizeDelta: {x: 147.67, y: 100}
   m_Pivot: {x: 0.5, y: 0.47882193}
 --- !u!114 &640859043
@@ -812,6 +812,7 @@ GameObject:
   m_Component:
   - component: {fileID: 692671357}
   - component: {fileID: 692671356}
+  - component: {fileID: 692671358}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -831,31 +832,67 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bf0eba9e2f954726a805c5612f8f545, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Title: {fileID: 1334717806}
-  Description: {fileID: 2022484498}
-  BlueText: {fileID: 1068407858}
-  OrangeText: {fileID: 1547086472}
-  BluePassiveBtn: {fileID: 348488388}
-  BlueAggressiveBtn: {fileID: 202010174}
-  OrangePassiveBtn: {fileID: 1011504627}
-  OrangeAggressiveBtn: {fileID: 1524419772}
-  CurrentRound:
-    RoundNo: 1
-    ScenerioName: '1956: The Praxy War'
-    ScenerioDesc: However, if one side were to prevail, a unified Praxiland would
-      be a valuable ally in the future...
-    OrangePassiveChoice: Withdraw
-    OrangeAggressiveChoice: Continue
+  m_Title: {fileID: 1334717809}
+  m_Description: {fileID: 2022484500}
+  m_BlueText: {fileID: 1068407862}
+  m_OrangeText: {fileID: 1547086476}
+  m_BluePassiveBtn: {fileID: 554469317}
+  m_BlueAggressiveBtn: {fileID: 1919767043}
+  m_OrangePassiveBtn: {fileID: 1016377387}
+  m_OrangeAggressiveBtn: {fileID: 1380194916}
+  m_BackgroundMusic: {fileID: 8300000, guid: f7916b8ede0c918458b1c966cc9a9c8b, type: 3}
+  m_BackgroundSource: {fileID: 1446418456}
+  m_StampSoundEffect: {fileID: 8300000, guid: f50efba72a1bd4822a3fec029e1851c2, type: 3}
+  m_StampSource: {fileID: 1446418457}
+  m_ChoiceRounds:
+  - Title: '1966: The Praxy War'
+    Description: "However, if one side were to prevail, a unified Praxiland would\r 
+      be a valuable ally in the future..."
     BluePassiveChoice: Withdraw
     BlueAggressiveChoice: Continue
+    OrangePassiveChoice: Withdraw
+    OrangeAggressiveChoice: Continue
     AggAgg: fbfffffffbffffff
     AggPass: 0a00000000000000
     PassAgg: 000000000a000000
     PassPass: 0500000005000000
-    BackgroundMusic: {fileID: 8300000, guid: 78690cc94e6824c65acbc7226a70df22, type: 3}
-    source: {fileID: 0}
-  StampSoundEffect: {fileID: 8300000, guid: f50efba72a1bd4822a3fec029e1851c2, type: 3}
-  Source: {fileID: 1446418456}
+    Background: {fileID: 0}
+  - Title: POLARising Opportunity
+    Description: What are they really? Should the Federation attack them?
+    BluePassiveChoice: Missiles
+    BlueAggressiveChoice: Oil
+    OrangePassiveChoice: Do Nothing
+    OrangeAggressiveChoice: Attack
+    AggAgg: fbfffffffbffffff
+    AggPass: 0000000005000000
+    PassAgg: f6ffffff0a000000
+    PassPass: 0a00000000000000
+    Background: {fileID: 0}
+  - Title: Area 36
+    Description: "Are they spies, here to steal valuable secrets from Republic biolabs? 
+      \r\nShould the Orangistanis be allowed to help in the cleanup, or arrested
+      at the boarder?"
+    BluePassiveChoice: Allow
+    BlueAggressiveChoice: Arrest
+    OrangePassiveChoice: Help
+    OrangeAggressiveChoice: Spy
+    AggAgg: 0000000000000000
+    AggPass: 0000000000000000
+    PassAgg: 000000000a000000
+    PassPass: 0a00000000000000
+    Background: {fileID: 0}
+  - Title: Total M.A.D.ness!
+    Description: "\rEveryone at the Game Jam looks to the two leaders to make the
+      ultimate choice!  What will it be? Nuke or spare?"
+    BluePassiveChoice: Spare
+    BlueAggressiveChoice: Nuke
+    OrangePassiveChoice: Spare
+    OrangeAggressiveChoice: Nuke
+    AggAgg: ecffffffecffffff
+    AggPass: 14000000ecffffff
+    PassAgg: ecffffff14000000
+    PassPass: ecffffffecffffff
+    Background: {fileID: 0}
 --- !u!4 &692671357
 Transform:
   m_ObjectHideFlags: 0
@@ -870,6 +907,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &692671358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692671355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cef7ab6791a2493ab32a224b28fb812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1011504627
 GameObject:
   m_ObjectHideFlags: 0
@@ -1106,8 +1155,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -12.39}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -142.3, y: 253.6}
-  m_SizeDelta: {x: 540.7, y: 375.3}
+  m_AnchoredPosition: {x: -67.2, y: 172.6}
+  m_SizeDelta: {x: 359.3, y: 249.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1068407860
 MonoBehaviour:
@@ -1163,14 +1212,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d1e3a41ad3ef4475a93afc95c3668ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Messages:
-  - OK!
-  - Good!
-  - Make It So!
-  - Done!
-  PlantSpeed: 2
-  HoverTrans: {fileID: 261837852}
-  IsPlanting: 0
+  m_Messages:
+  - Text: Ok!
+    Voice: {fileID: 8300000, guid: 883ebaeed36ae2d45bc6a5a2398a3c4d, type: 3}
+  - Text: Good!
+    Voice: {fileID: 8300000, guid: 9cad6f2f6719f6844abbac7b095b862c, type: 3}
+  - Text: Make It So!
+    Voice: {fileID: 8300000, guid: 9ae21d41bb741d84ba11164d1ffc9883, type: 3}
+  - Text: Done!
+    Voice: {fileID: 8300000, guid: 2ad2c487fabed65449ca9aa514519108, type: 3}
+  m_Source: {fileID: 1446418459}
+  m_PlantSpeed: 1.5
+  m_HoverTrans: {fileID: 261837852}
+  m_IsPlanting: 0
 --- !u!1 &1107929846
 GameObject:
   m_ObjectHideFlags: 0
@@ -1183,7 +1237,7 @@ GameObject:
   - component: {fileID: 1107929847}
   m_Layer: 0
   m_Name: ScoreKeeper
-  m_TagString: Player
+  m_TagString: ScoreKeeper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1200,6 +1254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d16227df4d42b4fb5bef8903c6ccea81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RoundNo: 0
   BluePlayerScore: 0
   OrangePlayerScore: 0
 --- !u!4 &1107929848
@@ -1247,11 +1302,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 312149280}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000012159, y: 224.35}
+  m_AnchoredPosition: {x: 0.000012159, y: 109}
   m_SizeDelta: {x: 498.4, y: 86.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1334717808
@@ -1266,6 +1321,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3fd7040869354cdea608c9642dd9ec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BeginOnStart: 0
+  CurrStatus: 0
   TypingSoundEffect: {fileID: 8300000, guid: f36e1ca6426e2423caf5051b1b288006, type: 3}
   Source: {fileID: 1446418456}
   TextString: 'This is your scenario: Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -1407,6 +1464,9 @@ GameObject:
   - component: {fileID: 1446418455}
   - component: {fileID: 1446418454}
   - component: {fileID: 1446418456}
+  - component: {fileID: 1446418457}
+  - component: {fileID: 1446418459}
+  - component: {fileID: 1446418458}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -1446,6 +1506,294 @@ Transform:
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1446418456
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446418453}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &1446418457
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446418453}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &1446418458
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446418453}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &1446418459
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1773,8 +2121,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 25.316002}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 272.7, y: -51.9}
-  m_SizeDelta: {x: 624.9, y: 216.7}
+  m_AnchoredPosition: {x: 197.2, y: -126}
+  m_SizeDelta: {x: 425, y: 147.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1547086474
 MonoBehaviour:
@@ -1830,14 +2178,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d1e3a41ad3ef4475a93afc95c3668ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Messages:
-  - "\u0425\u043E\u0440\u043E\u0448\u043E!"
-  - "\u041B\u0430\u0434\u043D\u043E!"
-  - "\u0415\u0441\u0442\u044C!"
-  - "\u0418\u0434\u0435\u0442!"
-  PlantSpeed: 2
-  HoverTrans: {fileID: 261837852}
-  IsPlanting: 0
+  m_Messages:
+  - Text: "\u0425\u043E\u0440\u043E\u0448\u043E!"
+    Voice: {fileID: 8300000, guid: 54edb1f07acc54a4f8fe504b5b06db10, type: 3}
+  - Text: "\u041B\u0430\u0434\u043D\u043E!"
+    Voice: {fileID: 8300000, guid: a7769ffec8006a247b673885bd4bfebf, type: 3}
+  - Text: "\u0415\u0441\u0442\u044C!"
+    Voice: {fileID: 8300000, guid: 17cddd0e9192e84459c69e57f287f9d4, type: 3}
+  - Text: "\u0418\u0434\u0435\u0442!"
+    Voice: {fileID: 8300000, guid: 328470621ddaea143a47ccdff9b2c312, type: 3}
+  m_Source: {fileID: 1446418458}
+  m_PlantSpeed: 1.5
+  m_HoverTrans: {fileID: 261837852}
+  m_IsPlanting: 0
 --- !u!1 &1649715459
 GameObject:
   m_ObjectHideFlags: 0
@@ -1869,7 +2222,7 @@ RectTransform:
   - {fileID: 1011504628}
   - {fileID: 1524419773}
   m_Father: {fileID: 312149280}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1907,7 +2260,7 @@ RectTransform:
   - {fileID: 348488389}
   - {fileID: 202010175}
   m_Father: {fileID: 312149280}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2024,11 +2377,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 312149280}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000024438, y: 65.55}
+  m_AnchoredPosition: {x: -0.000024438, y: -49.80005}
   m_SizeDelta: {x: 912.9, y: 231.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2022484500
@@ -2085,6 +2438,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3fd7040869354cdea608c9642dd9ec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BeginOnStart: 0
+  CurrStatus: 0
   TypingSoundEffect: {fileID: 8300000, guid: f36e1ca6426e2423caf5051b1b288006, type: 3}
   Source: {fileID: 1446418456}
   TextString: 'This is your scenario: Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -2173,4 +2528,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cef7ab6791a2493ab32a224b28fb812, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_GameManager: {fileID: 0}

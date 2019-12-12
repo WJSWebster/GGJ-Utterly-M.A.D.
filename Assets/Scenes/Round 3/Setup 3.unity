@@ -155,8 +155,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -110.4}
-  m_SizeDelta: {x: 777.8, y: 450.4}
+  m_AnchoredPosition: {x: 0, y: -0.000030517578}
+  m_SizeDelta: {x: 1732.7, y: 1003.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &118845490
 MonoBehaviour:
@@ -180,11 +180,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 4c0d8240159bd4841aa8d24fe013df22, type: 3}
-    m_FontSize: 32
+    m_FontSize: 75
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 83
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -219,13 +219,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TypingSoundEffect: {fileID: 8300000, guid: f36e1ca6426e2423caf5051b1b288006, type: 3}
   Source: {fileID: 426014132}
-  TextString: "Tragedy In Bluetopia! The Secret Biowarfare research facility in \"\"AREA
-    36\"\" has had a containment breach!  Bluetopian Scientists worry this contagion
+  TextString: "Tragedy In Bluetopia! The Secret Biowarfare research facility in \"AREA
+    36\" has had a containment breach!  Bluetopian Scientists worry this contagion
     could spread across the globe.\nOrangistani Scientists have been dispached to
     help contain the spread of disease. Or are they spies, here to steal valuable
     secrets from Republic biolabs?  \nshould the Orangistanis be allowed to help
     in the cleanup, or arrested at the boarder?"
-  TypeSpeed: 0.1
+  TypeSpeed: 0.06
 --- !u!1 &198126215
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,10 +274,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -451,7 +451,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a16e0e55259a44ef997f9ac945586cf2, type: 3}
+  m_audioClip: {fileID: 8300000, guid: a61fd845f9537254dbc2dcb4ca475557, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -602,8 +602,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6.499975, y: 237}
-  m_SizeDelta: {x: 531.1, y: 244.5}
+  m_AnchoredPosition: {x: 0, y: 644}
+  m_SizeDelta: {x: 1183.2, y: 544.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &847812672
 MonoBehaviour:
@@ -627,11 +627,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 4c0d8240159bd4841aa8d24fe013df22, type: 3}
-    m_FontSize: 64
+    m_FontSize: 150
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
-    m_MaxSize: 64
+    m_MaxSize: 194
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1

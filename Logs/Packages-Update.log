@@ -1,0 +1,10 @@
+
+=== Sat Jun 29 18:19:41 2019
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were updated:
+  com.unity.multiplayer-hlapi from version 1.0.2 to 1.0.4
+  com.unity.test-framework from version 1.0.13 to 1.0.14
+  com.unity.xr.legacyinputhelpers from version 2.0.2 to 2.0.4

@@ -749,6 +749,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScrollSpeed: 100
+  BeginTextBuffer: 0
 --- !u!1 &2010609325
 GameObject:
   m_ObjectHideFlags: 0
@@ -778,9 +779,137 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26e9da01682e24c78b018b683b859f9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speech: {fileID: 8300000, guid: b5f9379b3b9f9407cb74b9c33c73c9ff, type: 3}
-  Source: {fileID: 2083406170}
-  NextSceneIndex: 8
+  m_Title: {fileID: 726853237}
+  m_TickerTape: {fileID: 241929924}
+  m_HumanFont: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_AlienFont: {fileID: 12800000, guid: 9f7cea2a20af2534fb32c0258e4a0a5a, type: 3}
+  m_Results:
+  - m_Results:
+    - m_TickerText: '"Good evening people of Bluetopia!  The Situation in praxyland
+        has been brought to a head as the reinforced Praxilan Govenment,  in an attemt
+        to resist Increased Rebel pressure, has blown up the entire country!  Many
+        Bluetopian military resources were lost in the blast, and Proxiland will
+        remain uninhabitable for 100 years!  In other news our Premiere has annouced
+        an increase of defence spending to combat the orangistani menace.   God bless
+        the Republic!"'
+      m_IsAlien: 0
+      m_Read: {fileID: 8300000, guid: f5fa9da2ac8da4ca78e75d9624e6df69, type: 3}
+    - m_TickerText: '"Good evening People of Orangistan! Breaking news as  Praxiland
+        falls into chaos!  The Bluetopian backed militial have overthrown the peaceful
+        governement and are imposing brutal marshal law on the populace!  No doubt
+        under the heel of the Bluetopians, All Oringistani sympathisers have been
+        exiled from the region!   This is a sad day for Praxiland!  Death To the
+        Republic, Glory to the Federation!"'
+      m_IsAlien: 0
+      m_Read: {fileID: 8300000, guid: b5f9379b3b9f9407cb74b9c33c73c9ff, type: 3}
+    - m_TickerText: '"Good evening people of Bluetopia! Breaking news as Praxiland
+        falls into chaos!  The Orangistan backed totalitarian govenment has crushed
+        the Rebel militia and installed a violent police state. Rebels and Bluetopian
+        sympathisers are being rounded up and imprisoned. an Orange curtain has fallen
+        across Praxiland. Death to the Federation! God bless the Republic."'
+      m_IsAlien: 0
+      m_Read: {fileID: 8300000, guid: 8d622a3d2c3424329affc932fdf05f2c, type: 3}
+    - m_TickerText: '"Good eveing People of  Orangistan! Our allies in Praxiland
+        have signed  a treaty with the rebel militia, to create a new coilition goverment.
+        Peace has Been brought to the region with the mutual promise that the state
+        will remain Independant from both orangistani help and corrupting Bluetopian
+        influence!  Glory to the Federation!"'
+      m_IsAlien: 0
+      m_Read: {fileID: 8300000, guid: a07e329eebe5a42359e40a0c03d349b0, type: 3}
+  - m_Results:
+    - m_TickerText: '"Good evening People of Bluetopia! Due to our Premiere''s decision
+        to increase defence spending, the Polar Missile System has been completed
+        successfully!  Our military will protect our Boarders by using these bases
+        as a deterrent to Origistani aggression.  Bluetopia''s influence in the world
+        grows as nations of the world respect our military might! God Bless the Republic!
+        "'
+      m_IsAlien: 0
+      m_Read: {fileID: 8300000, guid: 8cbc33b7389054e039c6ee166cef19dd, type: 3}
+    - m_TickerText: '"Good evening People of Orangistan! Earlier this morning a strike
+        was ordered at our polar boarders do destroy Bluetopian missile silos that
+        threaten our way of life.  Our general secretary reports the attack was a
+        complete success and the Bluetopian nuclear programme has been set back by
+        several years! Orangistan will dominate the world stage, and our enemies
+        will learn to respect our Boarders! Glory to the Federation! "'
+      m_IsAlien: 0
+      m_Read: {fileID: 8300000, guid: ed22c28058873423494d45c8c4156b87, type: 3}
+    - m_TickerText: '"Good evening people of Orangistan! People in the polar regions
+        celebrate as a new Oil pipeline is completed in a rare trade deal with the
+        Bluetopians, supplying energy to countless millions!  Our General Secretary
+        has been praised for deciding not to bomb the hell out of the North Pole.
+        May the Trans-Polar oil deal lead us to a better future! Glory to the Federation!
+        "'
+      m_IsAlien: 0
+      m_Read: {fileID: 8300000, guid: ee78dd60d0cc74c488e504349e8f3d31, type: 3}
+    - m_TickerText: '"Good Evening People of Bluetopia! In a reckless act of barbarism,
+        the federation of Orangistan launched a bombing strike on several oil refineries
+        in the North pole! Oil spills into the ocean and thousands are left without
+        power. Even worse, Bluetopian Investors in the project have lost Money!!
+        Shame on the Federation! God bless the Republic! "'
+      m_IsAlien: 0
+      m_Read: {fileID: 8300000, guid: 1f38903f1cbe04c0bbf35747afd4857a, type: 3}
+  - m_Results:
+    - m_TickerText: '"Good evening people of Orangistan!   Our heroic scientists
+        have  aided the misguided bluetonians in cleaning up the Area 36 biohazard.
+        Orangistani experts were allowed to cross the boarder and have sucessfuly
+        contained the virus. millions around the world have been saved.  Glory to
+        the Federation!"'
+      m_IsAlien: 0
+      m_Read: {fileID: 8300000, guid: 79fe2f634a9b147bf8543a314513466a, type: 3}
+    - m_TickerText: '" <coughing>    Good evening People of Bluetopia!  Orangistani
+        spies have taken advantage of the Area 36 disaster and have stolen vital
+        bioweapon research!   Posing as scientists, the spies were allowed through
+        the boarder, and quickly left without offering support in the cleanup!  
+        This is a dark day for Bluetopia.   God bless the Republic."'
+      m_IsAlien: 0
+      m_Read: {fileID: 8300000, guid: 4a7dccfb41f454ca7a59d1873c767383, type: 3}
+    - m_TickerText: '"<coughing> Good Evening people of Orangistan! Our heroic Scientists
+        have been arrested in an attempt to help in the Area 36 cleanup by the Bluetopian
+        pigs!  In Refusing Orangistani help the biohazard crisis grows worse. Millions
+        of lives are threatened by the contagion.  Glory to the Federation!"'
+      m_IsAlien: 0
+      m_Read: {fileID: 8300000, guid: 4274e91ef88304e999fb9c08a9e0aeb7, type: 3}
+    - m_TickerText: '"Good evening people of Bluetopia!  Our vigilant scurity forces
+        have arrested Orangistani spies attemting to steal state secrets during the
+        cleanup of Area 36!  The Orangistani plot was to use our misfortune to their
+        advantage and steal bioweapons from our research facility.   Shame on the
+        Federation for such dishonesty! God bless the Rebublic!"'
+      m_IsAlien: 0
+      m_Read: {fileID: 8300000, guid: 9aba6c86d4b3a4a7abe75f3a4e864901, type: 3}
+  - m_Results:
+    - m_TickerText: '"Citizens of the Galactic colonies!  Our scouts have found a
+        new planet suitable for our needs!  Our Mind control agents successfully
+        duped the previous inhabitants into terraforming the planet for us prior
+        to our arrival! By wiping out all life with nuclear weapons The entire planet
+        is now covered in radioactive material, perfect for allowing our crops to
+        thrive. ALL HAIL THE HIVEMIND!"'
+      m_IsAlien: 1
+      m_Read: {fileID: 8300000, guid: 085ca52975659490e84f93cf28919b68, type: 3}
+    - m_TickerText: '"Citizens of the Galactic colonies! Our scouts have found a
+        new Planet suitable for our needs  The people on this planet are docile and
+        have little appetite for war.  They will be an easy target to colonise. 
+        ALL HAIL THE HIVEMIND!"'
+      m_IsAlien: 0
+      m_Read: {fileID: 8300000, guid: b86d5d2f379e24023b110ad25f4aa5c0, type: 3}
+    - m_TickerText: '" <coughing>  Good  evening citizens of Orangistan!  Our long
+        conflict with Bluetopia has ended in victory!! Our General Secretary ordered
+        a preemptive nuclear strike on the republic and Now we remain the dominant
+        power on the planet!    We still have a lot of nukes left over though, and
+        nobody left to use them on...  I think there is a community of little green
+        men on the moon.... they might pose a threat to our orange ideals...    Death
+        to the moon! Glory to the federation!"'
+      m_IsAlien: 0
+      m_Read: {fileID: 8300000, guid: cc4cf50316f58430b811bfddc98742b4, type: 3}
+    - m_TickerText: <coughing> Good evening citizens of Bluetopia! Our long conflict
+        with Orangistan has ended in Total victory!! Our Premiere ordered a preemptive
+        nuclear strike on the federation and Now we remain the dominant power on
+        the planet! we still have a lot of nukes left over though and nobody to use
+        them on... I think there is a community of little GREEN men on the moon....
+        they might pose a threat to our Blue ideals... Death to the moon! God bless
+        the republic!
+      m_IsAlien: 1
+      m_Read: {fileID: 8300000, guid: 69727018857384d9b94a2b9295b2b491, type: 3}
+  m_TypingSource: {fileID: 2083406170}
 --- !u!4 &2010609327
 Transform:
   m_ObjectHideFlags: 0

@@ -83,14 +83,7 @@ public class AudioManager : MonoBehaviour
         // volume to full and all others to zero
         for (int i = 0; i < m_MenuMusic.Length; i++)
         {
-            if(i == m_NextScene)
-            {
-                m_MenuMusic[i].source.volume = 1f;
-            }
-            else
-            {
-                m_MenuMusic[i].source.volume = 0f;
-            }
+            m_MenuMusic[i].source.volume = i == m_NextScene ? 1f : 0f;
         }
 
         // stop the time, as no longer being used, and reset for next time

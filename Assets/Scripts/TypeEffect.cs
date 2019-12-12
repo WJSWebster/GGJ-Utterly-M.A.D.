@@ -1,52 +1,80 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class TypeEffect : MonoBehaviour
 {
-    public AudioClip TypingSoundEffect;
-	public AudioSource Source;
+    public enum Status
+    {
+        WaitingToBegin = 0,
+        Typing = 1,
+        Finished = 2,
+    }
 
-	[TextArea]
-	public string TextString;
-	public float TypeSpeed;  // in secs
+    [SerializeField]
+    private bool BeginOnStart = false;
+    public Status CurrStatus = Status.WaitingToBegin;
+    [SerializeField]
+    private AudioClip TypingSoundEffect;
+    [SerializeField]
+    private AudioSource Source;
+
+    //[TextArea]
+    [HideInInspector]
+    public string TextString;
+    [SerializeField]
+    private float TypeSpeed;  // in secs
 
 	private string PartialText;
 	private float TotalTime;
 
 	private Text Label;
 
-    void Awake()
-    {
-		Label = GetComponent<Text>();
-    }
+    //void Awake()
+    //{
+    //}
 
     // Start is called before the first frame update
     void Start()
-	{
-		PartialText = "";
+    {
+        if(BeginOnStart)
+        {
+            Begin();
+        }
+    }
+
+    public void Begin()
+    {
+        Label = GetComponent<Text>();
+        TextString = Label.text;
+
+        PartialText = "";
 		TotalTime = 0f;
 
 		Source.clip = TypingSoundEffect;
 		Source.Play();
-	}
+
+        CurrStatus = Status.Typing;
+    }
 
     // Update is called once per frame
     void Update()
     {
-		TotalTime += Time.deltaTime;
+        if(CurrStatus == Status.Typing)
+        {
+            TotalTime += Time.deltaTime;
 
-		while(TotalTime >= TypeSpeed && PartialText.Length < TextString.Length)
-		{
-			PartialText += TextString[PartialText.Length];
-            TotalTime -= TypeSpeed;
+            while (TotalTime >= TypeSpeed && PartialText.Length < TextString.Length)
+            {
+                PartialText += TextString[PartialText.Length];
+                TotalTime -= TypeSpeed;
+            }
+            Label.text = PartialText;
+
+            if (PartialText.Length >= TextString.Length)
+            {
+                Source.Stop();
+                CurrStatus = Status.Finished;
+            }
         }
-        Label.text = PartialText;
-
-		if(PartialText.Length >= TextString.Length)
-		{
-			Source.Stop();
-		}
     }
 }
