@@ -8,12 +8,12 @@ public class ClockFace : MonoBehaviour
 	//private bool m_IsChangingTime;
 	//private int? m_OldHour;
 	//[Range(9, 15)]
-	public const int LowestStep = 0;
-	public const int HighestStep = 6;
-	[Range(LowestStep, HighestStep)]  // in total, 7 different steps
+	public const int m_LowestStep = 0;
+	public const int m_HighestStep = 6;
+	[Range(m_LowestStep, m_HighestStep)]  // in total, 7 different steps
 	public int m_Hour;
 
-	private const float HourDivAmount = 15f;//30f;//22.5f;
+	private const float m_HourDivAmount = 15f;//30f;//22.5f;
 	private RotateCurve m_RotateAnim;
 	private ScoreKeeper m_ScoreKeeper;
 
@@ -69,11 +69,12 @@ public class ClockFace : MonoBehaviour
 
 	Quaternion CalcQuatAngle(int HourStep)
 	{
-		if(HourStep > HighestStep || HourStep < 0)
+		if(HourStep > m_HighestStep || HourStep < 0)
 		{
 			Debug.LogError("HourStep(" + HourStep + ") is outside of the acceptable range!");
 		}
 
-		return Quaternion.Euler(0f, 0f, -((HourStep - LowestStep) * HourDivAmount));
+		float eulerAngle = -((HourStep - m_LowestStep) * m_HourDivAmount);  // todo: debug
+		return Quaternion.Euler(0f, 0f, eulerAngle);
 	}
 }

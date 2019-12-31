@@ -3,6 +3,7 @@
 public class RotateCurve : MonoBehaviour
 {
     public AnimationCurve m_MoveCurve = AnimationCurve.EaseInOut(0f, 0f, 1f, 1f);
+    public const float m_AnimationTime = 1f;
     public Transform m_HourArm;  // todo: figure out which one is actually needed? this or ClockFace.m_HourArm?
 
     private Quaternion m_StartRot;
@@ -11,16 +12,19 @@ public class RotateCurve : MonoBehaviour
 
     public bool m_IsRotating;
 
-    //private void Start()
-    //{
-    //    SetNewRotation();
-    //}
+    /*private*/ void Start()
+    {
+        if(m_HourArm == null)
+        {
+            m_HourArm = transform;
+        }
+    }
 
-    private void Update()
+    /*private*/ void Update()
     {
         if(m_IsRotating)
         {
-            if (m_AnimationTimer < 1f)//m_Target != m_HourArm.localRotation)
+            if (m_AnimationTimer < m_AnimationTime)//m_Target != m_HourArm.localRotation)
             {
                 m_AnimationTimer += Time.deltaTime;
                 m_HourArm.localRotation = Quaternion.SlerpUnclamped(m_StartRot, m_Target, m_MoveCurve.Evaluate(m_AnimationTimer));
@@ -29,7 +33,6 @@ public class RotateCurve : MonoBehaviour
             {
                 m_IsRotating = false;
                 m_AnimationTimer = 0f;
-
             }
         }
     }
@@ -38,7 +41,6 @@ public class RotateCurve : MonoBehaviour
     {
         m_StartRot = Origin.HasValue ? Origin.GetValueOrDefault() : m_HourArm.localRotation;
         m_Target = Destination;//Random.insideUnitSphere;
-
         m_IsRotating = true;
     }
 }

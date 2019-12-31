@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
+
+public enum Options { None, Begin, HowTo, Settings, Quit, Return };
 
 public class MenuInputController : MonoBehaviour
 {
@@ -14,21 +17,35 @@ public class MenuInputController : MonoBehaviour
     [SerializeField]
     private SceneTypes m_SceneType = SceneTypes.MainMenu;
 
-    private enum Options { None, Begin, HowTo, Settings, Quit };
+    //public enum Options { None, Begin, HowTo, Settings, Quit, Return};
     [SerializeField]
     private Options m_Option = Options.None;
 
     [Space(10)]
     [SerializeField]
     private Animator m_Animator;
+    [SerializeField]
+    private RotateCurve m_CameraRot;
+    [SerializeField]
+    private MainMenuCanvasController m_CanvasPan;
 
     private float m_StartTime;
     private bool m_HoldingDown = false;
 
-
     void Start()
     {
         m_StartTime = Time.time;
+
+        if(m_SceneType == SceneTypes.MainMenu)
+        {
+            string gameObjectName = this.name;
+            Debug.Assert(m_CameraRot != null, gameObjectName + "->MenuInputController::Start() - m_CameraRot not set for MainMenu!");
+
+            if(m_Option == Options.HowTo || m_Option == Options.Settings || m_Option == Options.Return)
+            {
+                Debug.Assert(m_CanvasPan != null, gameObjectName + "->MenuInputController::Start() - m_CanvasPan not set for MainMenu!");
+            }
+        }
     }
 
     // Update is called once per frame
@@ -68,7 +85,7 @@ public class MenuInputController : MonoBehaviour
         switch (m_Option)
         {
             case Options.Begin:
-                BeginMADness();
+                StartCoroutine(BeginMADness());
                 break;
             case Options.HowTo:
                 HowToPlay();
@@ -77,7 +94,10 @@ public class MenuInputController : MonoBehaviour
                 Settings();
                 break;
             case Options.Quit:
-                Quit();
+                StartCoroutine(Quit());
+                break;
+            case Options.Return:
+                Return();
                 break;
             case Options.None:
             default:
@@ -86,11 +106,14 @@ public class MenuInputController : MonoBehaviour
         }
     }
 
-    void BeginMADness()
+    IEnumerator BeginMADness()
     {
         // todo: do the text animation stuff here - still not 100% what this should be yet
         // maybe swing camera down/up or something?
-
+        Quaternion rotationAngle = Quaternion.Euler(-90f, 0f, 0f);
+        m_CameraRot.SetNewRotation(rotationAngle);
+        
+        yield return new WaitForSeconds(RotateCurve.m_AnimationTime);
 
         #if UNITY_EDITOR
             Debug.Log("BEGIN!");  // because cba moving to the next scene every time we test
@@ -104,26 +127,55 @@ public class MenuInputController : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
+    // TODO: for each of the following - OAOO violation:
     void HowToPlay()
     {
         // todo: swing camera to the left to reveal 'How To Play' screen
+        Quaternion rotationAngle = Quaternion.Euler(0f, -90f, 0f);
+        m_CameraRot.SetNewRotation(rotationAngle);
+        m_CanvasPan.ShiftUI(Options.HowTo);
+
         Debug.Log("HOW TO PLAY!");
     }
 
     void Settings()
     {
-        // todo: swing camera to the right to reveal 'Settings' screen
+        // todo: swing camera to the right to reveal 'Settings' 
+        Quaternion rotationAngle = Quaternion.Euler(0f, 90f, 0f);
+        m_CameraRot.SetNewRotation(rotationAngle);
+        m_CanvasPan.ShiftUI(Options.Settings);
+
         Debug.Log("SETTINGS!");
     }
 
-    public void Quit()
+    void Return()
     {
-        Debug.Log("QUIT!");
+        // todo: swing camera to the right to reveal 'Settings' 
+        Quaternion rotationAngle = Quaternion.Euler(0f, 0f, 0f);  // todo: how do we rotate back to centre?
+        m_CameraRot.SetNewRotation(rotationAngle);
+        m_CanvasPan.ShiftUI(Options.Return);
+
+        Debug.Log("RETURN!");
+    }
+
+    public IEnumerator Quit()  // todo: why is this public?
+    {
+        Quaternion rotationAngle = Quaternion.Euler(90f, 0f, 0f);
+        m_CameraRot.SetNewRotation(rotationAngle);
+
+        yield return new WaitForSeconds(RotateCurve.m_AnimationTime);
 
         #if UNITY_EDITOR
+            Debug.Log("QUIT!");
             UnityEditor.EditorApplication.isPlaying = false;
         #else
             Application.Quit();
         #endif
+    }
+
+    private void ResetCamera()
+    {
+        Quaternion rotationAngle = Quaternion.Euler(0f, 0f, 0f);
+        m_CameraRot.SetNewRotation(rotationAngle);
     }
 }
