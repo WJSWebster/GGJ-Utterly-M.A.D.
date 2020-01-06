@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -200,8 +200,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -110.4}
-  m_SizeDelta: {x: 777.8, y: 450.4}
+  m_AnchoredPosition: {x: 0, y: -110.39996}
+  m_SizeDelta: {x: 777.8, y: 450.40002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &118845490
 MonoBehaviour:
@@ -533,7 +533,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 5
-  m_Text: (Press Something to Continue...)
+  m_Text: (Press Any Key to Continue...)
 --- !u!222 &1277563681
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -726,6 +726,7 @@ MonoBehaviour:
   m_Option: 0
   m_Animator: {fileID: 0}
   m_CameraRot: {fileID: 0}
+  m_CanvasPan: {fileID: 0}
 --- !u!4 &1764371533
 Transform:
   m_ObjectHideFlags: 0

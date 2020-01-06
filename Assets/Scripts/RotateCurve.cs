@@ -10,6 +10,9 @@ public class RotateCurve : MonoBehaviour
     public Quaternion m_Target;  // todo: only public while trying to figure out how to check for time differences between clockface and this
     private float m_AnimationTimer;
 
+    [SerializeField]
+    private bool m_IsMainMenuCamera = false;
+
     public bool m_IsRotating;
 
     /*private*/ void Start()
@@ -27,7 +30,15 @@ public class RotateCurve : MonoBehaviour
             if (m_AnimationTimer < m_AnimationTime)//m_Target != m_HourArm.localRotation)
             {
                 m_AnimationTimer += Time.deltaTime;
-                m_HourArm.localRotation = Quaternion.SlerpUnclamped(m_StartRot, m_Target, m_MoveCurve.Evaluate(m_AnimationTimer));
+
+                //if(m_IsMainMenuCamera)
+                //{
+
+                //}
+                //else
+                {
+                    m_HourArm.localRotation = Quaternion.SlerpUnclamped(m_StartRot, m_Target, m_MoveCurve.Evaluate(m_AnimationTimer));
+                }
             }
             else
             {
@@ -40,7 +51,17 @@ public class RotateCurve : MonoBehaviour
     public void SetNewRotation(Quaternion Destination, Quaternion? Origin = null)
     {
         m_StartRot = Origin.HasValue ? Origin.GetValueOrDefault() : m_HourArm.localRotation;
-        m_Target = Destination;//Random.insideUnitSphere;
+        m_Target = Destination;//Random.insideUnitSphere
+
+        if(m_IsMainMenuCamera)
+        {
+            // Quaternion multiplication - https://forum.unity.com/threads/get-the-difference-between-two-quaternions-and-add-it-to-another-quaternion.513187/#post-3359650
+            Quaternion delta = m_HourArm.localRotation * Quaternion.Inverse(m_StartRot);
+
+            //m_StartRot *= delta;
+            m_Target *= delta;
+        }
+
         m_IsRotating = true;
     }
 }

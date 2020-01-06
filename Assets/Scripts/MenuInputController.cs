@@ -117,9 +117,9 @@ public class MenuInputController : MonoBehaviour
 
         #if UNITY_EDITOR
             Debug.Log("BEGIN!");  // because cba moving to the next scene every time we test
-        #else
-            NextScene();
         #endif
+
+        NextScene();
     }
 
     void NextScene()

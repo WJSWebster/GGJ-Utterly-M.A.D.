@@ -176,8 +176,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
     m_FontSize: 32
@@ -191,11 +189,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Citizens of the Galactic colonies!  Our scouts have found a new planet
-    suitable for our needs! Our Mind control agents successfully duped the previous
-    inhabitants into terraforming the planet for us prior to our arrival! By wiping
-    out all life with nuclear weapons The entire planet is now covered in radioactive
-    material, perfect for allowing our crops to thrive. ALL HAIL THE HIVEMIND!
+  m_Text: Citizens of the Galactic colonies!  Our scouts have found a new planet suitable
+    for our needs! Our Mind control agents successfully duped the previous inhabitants
+    into terraforming the planet for us prior to our arrival! By wiping out all life
+    with nuclear weapons The entire planet is now covered in radioactive material,
+    perfect for allowing our crops to thrive. ALL HAIL THE HIVEMIND!
 --- !u!222 &241929925
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -252,7 +250,7 @@ RectTransform:
   m_Children:
   - {fileID: 2144742331}
   m_Father: {fileID: 1830984486}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -277,8 +275,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
@@ -432,8 +428,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 9f7cea2a20af2534fb32c0258e4a0a5a, type: 3}
     m_FontSize: 64
@@ -458,55 +452,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 726853235}
   m_CullTransparentMesh: 0
---- !u!1 &813117609
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 813117611}
-  - component: {fileID: 813117610}
-  m_Layer: 0
-  m_Name: Static Effect
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &813117610
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 813117609}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22809b8c8c15e724d93ab4ced838b059, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  blendMode: 3
-  intensity: 1
-  texture: {fileID: 0}
-  offset: {x: 0, y: 0}
-  random: 1
-  overlayShader: {fileID: 0}
---- !u!4 &813117611
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 813117609}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 770, y: 374, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &963481298
 GameObject:
   m_ObjectHideFlags: 0
@@ -558,7 +503,6 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -728,10 +672,10 @@ RectTransform:
   m_Father: {fileID: 1975944051}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.25}
-  m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: 17.3, y: 12.5}
-  m_SizeDelta: {x: 953.9, y: 24.999}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -37.4995}
+  m_SizeDelta: {x: 0, y: 74.999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1292600527
 MonoBehaviour:
@@ -751,10 +695,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 0}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -826,8 +768,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 657fe08c8cc0e43da8cf567e805eb41d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -876,7 +816,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1830984486}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -901,8 +841,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
@@ -932,6 +870,7 @@ GameObject:
   - component: {fileID: 1533555991}
   - component: {fileID: 1533555990}
   - component: {fileID: 1533555989}
+  - component: {fileID: 1533555992}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -987,6 +926,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1533555992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533555988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c792ec8c7bd1d429d81436fd1e3de013, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_WaitTime: 5
+  m_SceneType: 2
+  m_Option: 0
+  m_Animator: {fileID: 0}
+  m_CameraRot: {fileID: 0}
+  m_CanvasPan: {fileID: 0}
 --- !u!1 &1830984482
 GameObject:
   m_ObjectHideFlags: 0
@@ -1079,6 +1036,7 @@ RectTransform:
   m_Children:
   - {fileID: 726853236}
   - {fileID: 1975944051}
+  - {fileID: 2067936654}
   - {fileID: 487282143}
   - {fileID: 1482789749}
   m_Father: {fileID: 0}
@@ -1196,10 +1154,10 @@ RectTransform:
   m_Father: {fileID: 1830984486}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -16.56, y: -327.8}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: 50}
+  m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2010609325
 GameObject:
@@ -1236,13 +1194,12 @@ MonoBehaviour:
   m_AlienFont: {fileID: 12800000, guid: 9f7cea2a20af2534fb32c0258e4a0a5a, type: 3}
   m_Results:
   - m_Results:
-    - m_TickerText: Good evening people of Bluetopia! The Situation in praxyland
-        has been brought to a head as the reinforced Praxilan Govenment, in an attemt
+    - m_TickerText: Good evening people of Bluetopia! The Situation in praxyland has
+        been brought to a head as the reinforced Praxilan Govenment, in an attemt
         to resist increased Rebel pressure, has blown up the entire country! Many
-        Bluetopian military resources were lost in the blast, and Proxiland will
-        remain uninhabitable for 100 years! In other news our Premiere has annouced
-        an increase of defence spending to combat the orangistani menace. God bless
-        the Republic!
+        Bluetopian military resources were lost in the blast, and Proxiland will remain
+        uninhabitable for 100 years! In other news our Premiere has annouced an increase
+        of defence spending to combat the orangistani menace. God bless the Republic!
       m_IsAlien: 0
       m_Read: {fileID: 8300000, guid: b5f9379b3b9f9407cb74b9c33c73c9ff, type: 3}
     - m_TickerText: Good evening people of Orangistan! Breaking news as  Praxiland
@@ -1270,24 +1227,24 @@ MonoBehaviour:
   - m_Results:
     - m_TickerText: Good evening people of Orangistan! Earlier this morning a strike
         was ordered at our polar boarders to destroy Bluetopian missile silos that
-        threaten our way of life. Our General Secretary reports the attack was a
-        complete success and the Bluetopian nuclear programme has been set back by
-        several years! Orangistan will dominate the world stage, and our enemies
-        will learn to respect our borders! Glory to the Federation!
+        threaten our way of life. Our General Secretary reports the attack was a complete
+        success and the Bluetopian nuclear programme has been set back by several
+        years! Orangistan will dominate the world stage, and our enemies will learn
+        to respect our borders! Glory to the Federation!
       m_IsAlien: 0
       m_Read: {fileID: 8300000, guid: 8cbc33b7389054e039c6ee166cef19dd, type: 3}
     - m_TickerText: Good evening people of Bluetopia! Due to our Premiere's decision
         to increase defence spending, the Polar Missile System has been completed
-        successfully! Our military will protect our borders by using these bases
-        as a deterrent to Origistani aggression. Bluetopia's influence in the world
-        grows as nations of the world respect our military might! God Bless the Republic!
+        successfully! Our military will protect our borders by using these bases as
+        a deterrent to Origistani aggression. Bluetopia's influence in the world grows
+        as nations of the world respect our military might! God Bless the Republic!
       m_IsAlien: 0
       m_Read: {fileID: 8300000, guid: ed22c28058873423494d45c8c4156b87, type: 3}
     - m_TickerText: Good Evening people of Bluetopia! In a reckless act of barbarism,
         the federation of Orangistan launched a bombing strike on several oil refineries
         in the North Pole! Oil spills into the ocean and thousands are left without
-        power. Even worse, Bluetopian investors in the project have lost Money!!
-        Shame on the Federation! God bless the Republic!
+        power. Even worse, Bluetopian investors in the project have lost Money!! Shame
+        on the Federation! God bless the Republic!
       m_IsAlien: 0
       m_Read: {fileID: 8300000, guid: ee78dd60d0cc74c488e504349e8f3d31, type: 3}
     - m_TickerText: Good evening people of Orangistan! People in the polar regions
@@ -1299,10 +1256,10 @@ MonoBehaviour:
       m_Read: {fileID: 8300000, guid: 1f38903f1cbe04c0bbf35747afd4857a, type: 3}
   - m_Results:
     - m_TickerText: Good evening people of Bluetopia!  Our vigilant security forces
-        have arrested Orangistani spies attempting to steal state secrets during
-        the cleanup of Area 36! The Orangistani plot was to use our misfortune to
-        their advantage and steal bioweapons from our research facility. Shame on
-        the Federation for such dishonesty! God bless the Rebublic!
+        have arrested Orangistani spies attempting to steal state secrets during the
+        cleanup of Area 36! The Orangistani plot was to use our misfortune to their
+        advantage and steal bioweapons from our research facility. Shame on the Federation
+        for such dishonesty! God bless the Rebublic!
       m_IsAlien: 0
       m_Read: {fileID: 8300000, guid: 9aba6c86d4b3a4a7abe75f3a4e864901, type: 3}
     - m_TickerText: <coughing> Good Evening people of Orangistan! Our heroic Scientists
@@ -1314,8 +1271,8 @@ MonoBehaviour:
     - m_TickerText: <coughing> Good evening people of Bluetopia! Orangistani spies
         have taken advantage of the Area 36 disaster and have stolen vital bioweapon
         research! Posing as scientists, the spies were allowed through the border,
-        and quickly left without offering support in the cleanup! This is a dark
-        day for Bluetopia. God bless the Republic.
+        and quickly left without offering support in the cleanup! This is a dark day
+        for Bluetopia. God bless the Republic.
       m_IsAlien: 0
       m_Read: {fileID: 8300000, guid: 4a7dccfb41f454ca7a59d1873c767383, type: 3}
     - m_TickerText: Good evening people of Orangistan! Our heroic scientists have
@@ -1335,11 +1292,11 @@ MonoBehaviour:
       m_Read: {fileID: 8300000, guid: 085ca52975659490e84f93cf28919b68, type: 3}
     - m_TickerText: <coughing> Good evening citizens of Bluetopia! Our long conflict
         with Orangistan has ended in Total victory!! Our Premiere ordered a preemptive
-        nuclear strike on the federation and now we remain the dominant power on
-        the planet! we still have a lot of nukes left over though and nobody to use
-        them on... I think there is a community of little GREEN men on the moon....
-        they might pose a threat to our Blue ideals... Death to the moon! God bless
-        the republic!
+        nuclear strike on the federation and now we remain the dominant power on the
+        planet! we still have a lot of nukes left over though and nobody to use them
+        on... I think there is a community of little GREEN men on the moon.... they
+        might pose a threat to our Blue ideals... Death to the moon! God bless the
+        republic!
       m_IsAlien: 0
       m_Read: {fileID: 8300000, guid: b86d5d2f379e24023b110ad25f4aa5c0, type: 3}
     - m_TickerText: <coughing> Good  evening citizens of Orangistan! Our long conflict
@@ -1375,6 +1332,102 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2067936653
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2067936654}
+  - component: {fileID: 2067936657}
+  - component: {fileID: 2067936656}
+  - component: {fileID: 2067936655}
+  m_Layer: 5
+  m_Name: PressSomething Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2067936654
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067936653}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.44342998, y: 0.44342998, z: 0.22172}
+  m_Children: []
+  m_Father: {fileID: 1830984486}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0.9000244}
+  m_SizeDelta: {x: 401.7, y: 44.200012}
+  m_Pivot: {x: 0.5, y: 0}
+--- !u!114 &2067936655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067936653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 175471e531c8d450eafd117e3be9d069, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsFlashing: 1
+  m_BaseOpacity: 0.5
+  m_BobFrequency: 3
+  m_BobRange: 0.75
+  m_Text: {fileID: 0}
+  m_Opacity: 0
+--- !u!114 &2067936656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067936653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 0.78431374}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 8c6c6fe6a4b7247e1aeddf902ebdf924, type: 3}
+    m_FontSize: 200
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 1
+    m_MaxSize: 200
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 5
+  m_Text: (Press Any Key to Continue...)
+--- !u!222 &2067936657
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067936653}
+  m_CullTransparentMesh: 0
 --- !u!1 &2083406169
 GameObject:
   m_ObjectHideFlags: 0
@@ -1737,8 +1790,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: adbd2c06ad104406ebcc80750918809c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
