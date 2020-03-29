@@ -23,4 +23,6 @@ public class Round
     [Space(20)]
 
     public Sprite Background;  // if we ever end up using this
+    public Texture2D Wallpaper;
+    public Texture2D NormalMap;
 }

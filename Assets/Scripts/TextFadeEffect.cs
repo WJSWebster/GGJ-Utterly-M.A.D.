@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class TextFadeEffect : MonoBehaviour
 {
     [SerializeField]
-    /*private*/ bool m_IsFlashing = true;
+    private bool m_IsFlashing = true;
     [SerializeField]
     private float m_BaseOpacity = 0.5f;  // The original opacity of the text
     [SerializeField]
@@ -39,11 +39,6 @@ public class TextFadeEffect : MonoBehaviour
         }
 
         m_Opacity = m_Text.color.a;
-
-        //m_BaseOpacity = Text.color.a;
-        string gameObjectName = this.name;
-        Debug.Log("Text's text: " + m_Text.text);
-        bool debug = true;
     }
 
     void Update ()

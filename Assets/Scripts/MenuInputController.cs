@@ -70,7 +70,7 @@ public class MenuInputController : MonoBehaviour
                 }
                 else if (m_SceneType == SceneTypes.Other)
                 {
-                    NextScene();
+                    NextScene.LoadNextScene();
                 }
             }
         }
@@ -117,14 +117,9 @@ public class MenuInputController : MonoBehaviour
 
         #if UNITY_EDITOR
             Debug.Log("BEGIN!");  // because cba moving to the next scene every time we test
-        #endif
+#endif
 
-        NextScene();
-    }
-
-    void NextScene()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        NextScene.LoadNextScene();
     }
 
     // TODO: for each of the following - OAOO violation:

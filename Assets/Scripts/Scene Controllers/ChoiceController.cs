@@ -44,6 +44,12 @@ public class ChoiceController : MonoBehaviour
     [Space(10)]
 
     [SerializeField]
+    private GameObject m_WallpaperPlane;
+    [SerializeField]
+    private Material m_WallpaperMat;
+    [Space(10)]
+
+    [SerializeField]
     private Animator m_Animator;
 
     [Header("Setup Values:")]
@@ -74,6 +80,17 @@ public class ChoiceController : MonoBehaviour
         m_BlueAggressiveBtn.text = m_CurrentRound.BlueAggressiveChoice;
         m_OrangePassiveBtn.text = m_CurrentRound.OrangePassiveChoice;
         m_OrangeAggressiveBtn.text = m_CurrentRound.OrangeAggressiveChoice;
+
+        if(m_WallpaperMat == null) // or m_WallpaperMat.Equals(emptyGameObject)
+        {
+            m_WallpaperMat = m_WallpaperPlane.GetComponent<Renderer>().GetComponent<Material>();
+
+            Debug.Assert(m_WallpaperMat == null);
+        }
+
+        m_WallpaperMat.SetTexture("_BaseMap", m_CurrentRound.NormalMap);
+        m_WallpaperMat.SetTexture("_SpecGlossMap", m_CurrentRound.Wallpaper);
+        m_WallpaperMat.SetTexture("_EmissionMap", m_CurrentRound.Wallpaper);
     }
 
     public void SetChosen(bool IsBlue, int Choice)  // not: for Choice, 0 == aggressive, 1 == Passive
