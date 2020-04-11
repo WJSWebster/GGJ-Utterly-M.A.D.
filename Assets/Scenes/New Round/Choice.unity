@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1412,7 +1412,6 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   m_HourArm: {fileID: 1113345319}
-  m_Target: {x: 0, y: 0, z: 0, w: 0}
   m_IsMainMenuCamera: 0
   m_IsRotating: 0
 --- !u!114 &982120660
@@ -1589,7 +1588,6 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   m_HourArm: {fileID: 1341423799}
-  m_Target: {x: 0, y: 0, z: 0, w: 0}
   m_IsMainMenuCamera: 0
   m_IsRotating: 0
 --- !u!114 &992482459
@@ -3200,7 +3198,6 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   m_HourArm: {fileID: 681857447}
-  m_Target: {x: 0, y: 0, z: 0, w: 0}
   m_IsMainMenuCamera: 0
   m_IsRotating: 0
 --- !u!1 &1815091186
@@ -3555,9 +3552,10 @@ GameObject:
   - component: {fileID: 2111811197}
   - component: {fileID: 2111811196}
   - component: {fileID: 2111811199}
+  - component: {fileID: 2111811200}
   m_Layer: 0
   m_Name: EventSystem
-  m_TagString: Untagged
+  m_TagString: InputManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3620,6 +3618,18 @@ MonoBehaviour:
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3cef7ab6791a2493ab32a224b28fb812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2111811200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111811195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f87bd14edfd65334da4134836f5f24f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &2120531676931570963

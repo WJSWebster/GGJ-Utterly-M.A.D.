@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -871,9 +871,10 @@ GameObject:
   - component: {fileID: 1533555990}
   - component: {fileID: 1533555989}
   - component: {fileID: 1533555992}
+  - component: {fileID: 1533555993}
   m_Layer: 0
   m_Name: EventSystem
-  m_TagString: Untagged
+  m_TagString: InputManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -933,7 +934,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1533555988}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c792ec8c7bd1d429d81436fd1e3de013, type: 3}
   m_Name: 
@@ -944,6 +945,18 @@ MonoBehaviour:
   m_Animator: {fileID: 0}
   m_CameraRot: {fileID: 0}
   m_CanvasPan: {fileID: 0}
+--- !u!114 &1533555993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533555988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f87bd14edfd65334da4134836f5f24f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1830984482
 GameObject:
   m_ObjectHideFlags: 0
@@ -1756,7 +1769,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   m_HourArm: {fileID: 1466019539}
-  m_Target: {x: 0, y: 0, z: 0, w: 0}
+  m_IsMainMenuCamera: 0
   m_IsRotating: 0
 --- !u!114 &2144742333
 MonoBehaviour:

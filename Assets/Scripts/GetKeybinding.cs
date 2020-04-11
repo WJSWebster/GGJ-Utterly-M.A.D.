@@ -33,7 +33,7 @@ public class GetKeybinding : MonoBehaviour
 
     // https://forum.unity.com/threads/find-out-which-key-was-pressed.385250/#post-2504577
     // Detects keys pressed and prints their keycode
-    void /*Update*/OnGUI()
+    void OnGUI()
     {
         Event e = Event.current;
         if (e.isKey && Event.current.type == EventType.KeyUp)

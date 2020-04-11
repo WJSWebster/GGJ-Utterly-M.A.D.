@@ -58,7 +58,7 @@ public class ClockFace : MonoBehaviour
 		//if(m_IsChangingTime)
 		//{
 		Quaternion hourArmRot = CalcQuatAngle(m_Hour);
-		if (!m_RotateAnim.m_IsRotating && (hourArmRot != m_RotateAnim.m_Target))
+		if (!m_RotateAnim.m_IsRotating && (hourArmRot != m_RotateAnim.GetTarget()))
 		{
 			m_RotateAnim.SetNewRotation(hourArmRot);
 		}

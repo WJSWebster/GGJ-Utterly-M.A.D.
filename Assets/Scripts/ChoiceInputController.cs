@@ -2,7 +2,10 @@
 
 public class ChoiceInputController : MonoBehaviour
 {
-	private ChoiceController m_GameManager;
+    [SerializeField]
+    private ChoiceController m_GameManager;
+    [SerializeField]  // debug
+	private InputManager m_InputManager;  // Todo: convert into a static singleton, so no object needs to be made
 
 	private bool m_BlueChosen;
 	private bool m_OrangeChosen;
@@ -10,6 +13,13 @@ public class ChoiceInputController : MonoBehaviour
 	void Start()
 	{
 		m_GameManager = GetComponent<ChoiceController>();  // todo: shouldn't need to because the object is already a ChoiceController
+        //GameObject.FindGameObjectsWithTag("InputManager")
+        GameObject debug = GameObject.Find("EventSystem");
+        m_InputManager = GameObject.Find("EventSystem").GetComponent<InputManager>();
+        if(m_InputManager == null)
+        {
+            bool debug2 = true;
+        }
 	}
 
 	// Update is called once per frame
@@ -17,11 +27,11 @@ public class ChoiceInputController : MonoBehaviour
 	{
 		if (!m_BlueChosen)
 		{
-			if (Input.GetKeyUp(KeyCode.A) || Input.GetButtonUp("BlueAggressive"))  // Blue is Aggressive
+			if (m_InputManager.GetButtonUp("BlueAggressive"))  // Blue is Aggressive
 			{
 				m_GameManager.SetChosen(true, 0);
 			}
-			else if (Input.GetKeyUp(KeyCode.D) || Input.GetButtonUp("BluePassive"))  // Blue is Passive
+			else if (m_InputManager.GetButtonUp("BluePassive"))  // Blue is Passive
 			{
 				m_GameManager.SetChosen(true, 1);
 			}
@@ -29,16 +39,16 @@ public class ChoiceInputController : MonoBehaviour
 
 		if (!m_OrangeChosen)
 		{
-			if (Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetButtonUp("OrangeAggressive"))  // Orange is Aggressive
+			if (m_InputManager.GetButtonUp("OrangeAggressive"))  // Orange is Aggressive
 			{
 				m_GameManager.SetChosen(false, 0);
 			}
-			else if (Input.GetKeyUp(KeyCode.RightArrow) || Input.GetButtonUp("OrangePassive"))  // Orange is Passive
+			else if (m_InputManager.GetButtonUp("OrangePassive"))  // Orange is Passive
 			{
 				m_GameManager.SetChosen(false, 1);
 			}
 		}
 	}
 
-    // todo: also needs a function for detemining controller type and displaying the relevant icons
+	// todo: also needs a function for determining controller type and displaying the relevant icons
 }
